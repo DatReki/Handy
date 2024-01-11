@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Example</title>
+</head>
+<body>
+    <script>
+        const templateString = `
+            <div class="test-class">
+                <h1>Test</h1>
+                <p>An example HTML template string</p>
+            </div>
+        `;
+
+        // Convert a HTML template string which you can console log to get the actual html
+        function htmlTemplateStringToRawHtml(template) {
+            return new DOMParser().parseFromString(template, "text/html");
+        }
+
+        console.log(htmlTemplateStringToRawHtml(templateString));
+    </script>
+</body>
+</html>
